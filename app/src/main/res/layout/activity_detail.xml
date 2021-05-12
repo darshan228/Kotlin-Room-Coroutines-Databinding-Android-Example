@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.detail.view.DetailActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.darshan.roomcoroutine.ui.detail.viewmodel.DetailViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@{viewModel.restaurantDetails.data.title}"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager"
+                tools:text="Barbeque Nation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneNo"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{viewModel.restaurantDetails.data.phone_no}"
+                android:textColor="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="+91 1234567890" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:rating="@{viewModel.restaurantDetails.data.rating}"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneNo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReview"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="(1000 Reviews)"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar"
+                tools:text="(1000 Reviews)" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDesc"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{viewModel.restaurantDetails.data.description}"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescText"
+                tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddressText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddress"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{viewModel.restaurantDetails.data.address}"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressText"
+                tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

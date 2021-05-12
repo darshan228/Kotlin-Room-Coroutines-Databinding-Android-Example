@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kotlin-Room-Coroutines-Databinding-Android-Example</string>
+    <string name="description">Description</string>
+    <string name="address">Address</string>
+</resources>
