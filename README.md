@@ -37,5 +37,5 @@ Please fork this repository and contribute back. Any contributions, large or sma
 
 ## Support
 
-If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
-## :sunglasses::star2:Darshi You Rock:star2::ghost::100:
+If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:.<br><br>
+<b>:sunglasses::star2:Darshan Rathod:star2::ghost::100:<b>
