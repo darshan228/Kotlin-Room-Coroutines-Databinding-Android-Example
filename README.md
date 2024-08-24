@@ -1,4 +1,8 @@
 # Kotlin-Room-Coroutines-Databinding-Android-Example
+
+![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg?color=3399ff&style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/darshan228/Kotlin-Room-Coroutines-Databinding-Android-Example?color=3399ff&style=for-the-badge)
+
 If you want to learn Kotlin Coroutines,Room and Databinding for Android Development and wants to master it, then this project is for you.
 
 ## About this project: 
