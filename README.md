@@ -27,5 +27,11 @@ If you want to learn Kotlin Coroutines,Room and Databinding for Android Developm
 * [Kotlin withContext vs Async-await](https://blog.mindorks.com/kotlin-withcontext-vs-async-await)
 * [Room Database with Kotlin Coroutines in Android](https://blog.mindorks.com/room-database-with-kotlin-coroutines-in-android)
 
-### If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
-### :sunglasses::star2:Darshi You Rock:star2::ghost::100:
+## Contributing
+
+Please fork this repository and contribute back. Any contributions, large or small, major or minor features, bug fixes, are welcomed and appreciated but will be thoroughly reviewed.
+
+## Support
+
+If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
+## :sunglasses::star2:Darshi You Rock:star2::ghost::100:
